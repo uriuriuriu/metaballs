@@ -2,6 +2,7 @@
 Blob[] blobs = new Blob[10];
 
 void setup() {size(640, 360);
+  colorMode(HSB);
   for(int i = 0; i < blobs.length; i++){
     blobs[i] = new Blob(
       random(width),
@@ -22,7 +23,7 @@ void draw(){
         sum += 100 * b.r / d;
       }
 
-      pixels[index] = color(sum);
+      pixels[index] = color(sum, 255, 255);
     }
   }
   updatePixels();
