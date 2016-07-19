@@ -23,7 +23,7 @@ void draw(){
         sum += 100 * b.r / d;
       }
 
-      pixels[index] = color(constrain(sum, 0, 220), 255, 255);
+      pixels[index] = color(sum % 255, 255, 255);
     }
   }
   updatePixels();
