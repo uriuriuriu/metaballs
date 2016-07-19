@@ -11,7 +11,8 @@ void draw(){
     for(int y = 0; y < height; y++){
       int index =  x + y * width;
       float d = dist(x, y, b.pos.x, b.pos.y);
-      pixels[index] = color(d);
+      float col = b.r / d;
+      pixels[index] = color(col);
     }
   }
   updatePixels();
