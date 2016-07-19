@@ -16,10 +16,13 @@ void draw(){
   for(int x = 0; x < width ; x++){
     for(int y = 0; y < height; y++){
       int index =  x + y * width;
-      float d = dist(x, y, blobs[0].pos.x, blobs[0].pos.y);
-      float col = 1000 * blobs[0].r / d;
+      float sum = 0;
+      for (Blob b : blobs){
+        float d = dist(x, y, b.pos.x, b.pos.y);
+        sum += 1000 * b.r / d;
+      }
 
-      pixels[index] = color(col);
+      pixels[index] = color(sum);
     }
   }
   updatePixels();
