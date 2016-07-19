@@ -4,7 +4,7 @@ class Blob{
 
   Blob(float x, float y){
     pos = new PVector(x, y);
-    r = 40;
+    r = 40000;
   }
   void show(){
     noFill();
