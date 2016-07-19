@@ -10,7 +10,7 @@ void draw(){
   for(int x = 0; x < width ; x++){
     for(int y = 0; y < height; y++){
       int index =  x + y * width;
-      float d = dist(x, y, width/2, height/2);
+      float d = dist(x, y, b.pos.x, b.pos.y);
       pixels[index] = color(d);
     }
   }
