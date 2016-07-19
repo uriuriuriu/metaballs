@@ -11,6 +11,13 @@ class Blob{
   }
   void update(){
     pos.add(vel);
+
+    if(pos.x > width || pos.x < 0){
+      vel.x *= -1;
+    }
+    if(pos.y > height || pos.y < 0){
+      vel.y *= -1;
+    }
   }
   void show(){
     noFill();
