@@ -1,5 +1,5 @@
 // Blob b;
-Blob[] blobs = new Blob[2];
+Blob[] blobs = new Blob[10];
 
 void setup() {size(640, 360);
   for(int i = 0; i < blobs.length; i++){
@@ -19,7 +19,7 @@ void draw(){
       float sum = 0;
       for (Blob b : blobs){
         float d = dist(x, y, b.pos.x, b.pos.y);
-        sum += 300 * b.r / d;
+        sum += 100 * b.r / d;
       }
 
       pixels[index] = color(sum);
