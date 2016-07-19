@@ -1,9 +1,14 @@
 class Blob{
-  Pvector pos;
+  PVector pos;
   float r;
 
   Blob(float x, float y){
-    pos = new Pvector(x, y);
+    pos = new PVector(x, y);
     r = 40;
+  }
+  void show(){
+    noFill();
+    stroke(255);
+    ellipse(pos.x, pos.y, r*2, r*2);
   }
 }

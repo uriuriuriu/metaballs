@@ -1,5 +1,10 @@
+Blob b;
 
 void setup() {size(640, 360);
+  b = new Blob(100, 100);
+}
+
+void draw(){
   background(51);
   loadPixels();
   for(int x = 0; x < width ; x++){
@@ -10,4 +15,6 @@ void setup() {size(640, 360);
     }
   }
   updatePixels();
+
+  b.show();
 }
