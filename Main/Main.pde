@@ -5,7 +5,8 @@ void setup() {size(640, 360);
   for(int x = 0; x < width ; x++){
     for(int y = 0; y < height; y++){
       int index =  x + y * width;
-      pixels[index] = color(x, 0, y);
+      float d = dist(x, y, width/2, height/2);
+      pixels[index] = color(d);
     }
   }
   updatePixels();
