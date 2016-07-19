@@ -19,7 +19,7 @@ void draw(){
       float sum = 0;
       for (Blob b : blobs){
         float d = dist(x, y, b.pos.x, b.pos.y);
-        sum += 1000 * b.r / d;
+        sum += 300 * b.r / d;
       }
 
       pixels[index] = color(sum);
@@ -28,6 +28,6 @@ void draw(){
   updatePixels();
   for (Blob b : blobs){
     b.update();
-    b.show();
+    // b.show();
   }
 }
